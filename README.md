@@ -27,3 +27,40 @@ Neville's Algorithm which is derived by eric harold neville in 1934 is based on 
 
 ### Importance:
 nevilles's algorithm has immense importance than other polynomial interpolation methods that is this algorithm is numerically stable that is it uses the given data directly and there is no requirement to represent the polynomial in the basis of 1,t,... . Although, it is fast and dynamic and it has the simple structure and easy to update.
+
+## Mathematical Explanation:
+If we consider a polynomial P(X) having 'n' number of nodes so the formula is as follows
+
+$$P_{a,...,b}(x)=(\frac{x-x_{j}}{x_{i}-x_{j}})P_{a,...,j-1,j+1,...b}(x) + (\frac{x_{i}-x}{x_{i}-x{j}})P_{a,..i-1,i+1,..,b}(x)$$
+So, by using the formula recursively we can generate an array of polynomials
+
+$$P_{0}(x)$$
+$$P_{1}(x)P_{0,1}(x)$$
+$$P_{2}(x)P_{1,2}(x)P_{0,1,2}(x)$$
+$$.$$
+$$.$$
+$$.$$
+$$P_{n}(x)P_{n-1,n}(x)....P_{0,...,n}$$
+
+So, we can display the polynomial array as matrix form
+
+$$S_{ij}(x)$$
+where i and j are the position of element in the matrix
+
+$$S_{00}(x)$$
+$$S_{10}(x)S_{11}(x)$$
+$$S_{20}(x)S_{21}(x)S_{22}(x)$$
+$$.$$
+$$.$$
+$$.$$
+So, for all j=0 P(x) is constant and equals to f(x) and all values oj j>0 the general recursive formula is as given which is also used in the code. So, if there is (n+1) data points given:
+
+$$(x_{0},y_{0}),(x_{1},y_{1}),(x_{2},y_{2}),....,(x_{n},y_{n})$$
+for an underlying function f and given number of x for which we would like to estimate of f(x). We are interested in computing degree n polynomial given:
+
+$$P_{0,1,...n}(x)$$
+The general recursive formula for this is as follow
+
+$$$$
+
+$$P_{i-j,i-j+1,..,i}(x)=\frac{(x-x_{i-j})P_{i-j+1,..,i}(x)+(x-x_{i})P_{i-j,...,i-1}(x)}{x_{i}-x_{i-j}}$$
