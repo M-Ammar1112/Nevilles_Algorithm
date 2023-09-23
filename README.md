@@ -74,3 +74,15 @@ In this code we define a function called neville which has three arguments. Thes
 The numpy library is used here to get the result of interpolation directly from it so we can compare it with the estimate given by neville's algorithm and can judge the accuracy of the algorithm at the certain point.
 #### The scipy library:
 The function make_interp_spline is called from the scipy library to make the nodes to form the smooth curve ehen nodes are greater than three. We take the list x and y as an argument in the function that we import and assign it to X_Y_Spline method. Furthermore,we use numpy linspace function and set the curve smoothness to 500 and assign it to X_ and we put X_ as an argument in X_Y_Spline method and assign it to y.
+#### The matplotlib library:
+The pyplot and style functions are imported from this library. pyplot is used to plot the nodes on the graph style function is used here to set the style of the grid to 'ggplot'. we use a third argument 'r*' and 'g*' which represents the input nodes to be red and interpolating point a to be green coordinate. To implement the plotting we use if-else loop to set the control flow. If the input nodes are lesser than four so the plot is without converting it to curve else when the nodes are greater than four so it first converts it to the curve using scipy implementation and than plot it on the grid using matplotlib.
+
+### Definition of function:
+At first we define a function neville which have three arguments that is xlist,ylist and a. xlist is the input list of x and it is the list of size n, ylist is the input list of y which is corresponding to x in a sequece which is of the size n and 'a' is the arbitrary value of 'x' for which the value of polynomial to be estimated.
+### Setting up variables:
+we set two variables inside the neville function which is n and p. n is the len(xlist) in which the length of xlist input is assigned to n and p uses n and generate a list od zero's whose length is of size n. The example is as follows in which we take xlist as a hardcoded list which have five elements and a print function to print p:
+
+xlist=[1,2,3,4,5]
+n = len(xlist)
+p = n*[0]
+print(p)
