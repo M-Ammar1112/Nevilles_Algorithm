@@ -80,9 +80,22 @@ The pyplot and style functions are imported from this library. pyplot is used to
 ### Definition of function:
 At first we define a function neville which have three arguments that is xlist,ylist and a. xlist is the input list of x and it is the list of size n, ylist is the input list of y which is corresponding to x in a sequece which is of the size n and 'a' is the arbitrary value of 'x' for which the value of polynomial to be estimated.
 ### Setting up variables:
-we set two variables inside the neville function which is n and p. n is the len(xlist) in which the length of xlist input is assigned to n and p uses n and generate a list od zero's whose length is of size n. The example is as follows in which we take xlist as a hardcoded list which have five elements and a print function to print p:
+we set two variables inside the neville function which is n and p. n is the len(xlist) in which the length of xlist input is assigned to n and p uses n and generate a list od zero's whose length is of size n. The example is as follows in which we take xlist as a hardcoded list which have five elements and a print function to print p
 
-xlist=[1,2,3,4,5]\n
-n = len(xlist)\n
-p = n*[0]\n
-print(p)
+### The for loops:
+In this code we use two nested for loops who are responsible for the recursion of the neville's algorithm. The outer for loop has the variable i and runs from 0 to n-1 which runs n times and the inner for loops has a variable j and runs from 0 to (n-i-1) which is n-i times.i and j represent the position of element in the matrix. i changes when row chnges and j changes when column changes. So, when i=0 the inner loop runs n times and when i increases the occurence of inner loop decreases.
+### The if-else statement:
+We use the if-else statement in the inner loop. The if statement executes when i=0 that is the degree 0 polynomial which is directly equivalent to their corresponding f(x) value. The else statement executes when i > 0. The else statement contains the recursive formula which uses the previous value of p[j] already re-stored in the list p. When the else statement executes the list p upgrades and move one consecutive forward in every iteration and in the last iteration p[n-1] changes which is the final estimated value.
+#### example:
+We take an example of four data points as follows:
+
+$$X_{1}(1,5) , X_{2}(2,6) , X_{3}(3,7) , X_{4}(4,8)$$
+and we want to find the estimate of the underlying function f(x) at a=3.5. So, we make two list and one 'a' input as arguments to the function as follows:
+
+
+$$xlist=[1,2,3,4]$$
+$$ylist=[5,6,7,8]$$
+$$a=3.5$$
+
+
+
