@@ -68,3 +68,9 @@ $$P_{i-j,i-j+1,..,i}(x)=\frac{(x-x_{i-j})P_{i-j+1,..,i}(x)+(x-x_{i})P_{i-j,...,i
 ## About the code:
 In this code we define a function called neville which has three arguments. These three arguments is used in the code and given when the function is called. In this functon we use the formula of neville's interpolation algorithm which is made recursive by the loops used in this code. Moreover,we import three libraries numpy,scipy and matplotlib. These libraries are used in making the plot of the given data and expressing the coordinate of the interpolating algorithm.
 
+## Code:
+### Importing libraries:
+#### Numpy library:
+The numpy library is used here to get the result of interpolation directly from it so we can compare it with the estimate given by neville's algorithm and can judge the accuracy of the algorithm at the certain point.
+#### The scipy library:
+The function make_interp_spline is called from the scipy library to make the nodes to form the smooth curve ehen nodes are greater than three. We take the list x and y as an argument in the function that we import and assign it to X_Y_Spline method. Furthermore,we use numpy linspace function and set the curve smoothness to 500 and assign it to X_ and we put X_ as an argument in X_Y_Spline method and assign it to y.
