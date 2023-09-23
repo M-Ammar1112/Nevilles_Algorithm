@@ -82,7 +82,7 @@ At first we define a function neville which have three arguments that is xlist,y
 ### Setting up variables:
 we set two variables inside the neville function which is n and p. n is the len(xlist) in which the length of xlist input is assigned to n and p uses n and generate a list od zero's whose length is of size n. The example is as follows in which we take xlist as a hardcoded list which have five elements and a print function to print p:
 
-xlist=[1,2,3,4,5]/n
-n = len(xlist)/n
-p = n*[0]/n
+xlist=[1,2,3,4,5]\n
+n = len(xlist)\n
+p = n*[0]\n
 print(p)
