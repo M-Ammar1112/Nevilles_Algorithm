@@ -97,5 +97,6 @@ $$xlist=[1,2,3,4]$$
 $$ylist=[5,6,7,8]$$
 $$a=3.5$$
 
-
+## Conclusion:
+In this report the implementation of neville's algorithm is demonstrated using python and explained mathematically using the recurrence formula for neville's algorithm. The code is demostrated using python in which we made the function and implement the recurrence formula in the code. From this we can conclude that neville's algorithm is better the recurrence relation of newton form as it is numerically stable.
 
