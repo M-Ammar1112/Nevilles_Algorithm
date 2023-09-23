@@ -64,3 +64,7 @@ The general recursive formula for this is as follow
 $$$$
 
 $$P_{i-j,i-j+1,..,i}(x)=\frac{(x-x_{i-j})P_{i-j+1,..,i}(x)+(x-x_{i})P_{i-j,...,i-1}(x)}{x_{i}-x_{i-j}}$$
+
+## About the code:
+In this code we define a function called neville which has three arguments. These three arguments is used in the code and given when the function is called. In this functon we use the formula of neville's interpolation algorithm which is made recursive by the loops used in this code. Moreover,we import three libraries numpy,scipy and matplotlib. These libraries are used in making the plot of the given data and expressing the coordinate of the interpolating algorithm.
+
